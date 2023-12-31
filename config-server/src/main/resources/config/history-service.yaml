@@ -4,7 +4,7 @@ spring:
   application:
     name: history-service
   datasource:
-    url: jdbc:postgresql://host.docker.internal:5432/postgres?currentSchema=history
+    url: jdbc:postgresql://host.docker.internal:5432/postgres?currentSchema=public
     username: postgres
     password: postgres
   jpa:

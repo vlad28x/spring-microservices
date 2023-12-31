@@ -1,0 +1,14 @@
+services:
+  db-history:
+    image: postgres:latest
+    container_name: db-history
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - db-history:/var/lib/postgresql/data
+volumes:
+  db-history:
