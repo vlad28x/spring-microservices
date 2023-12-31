@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: math-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+  config:
+    import: 'optional:configserver:'
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka

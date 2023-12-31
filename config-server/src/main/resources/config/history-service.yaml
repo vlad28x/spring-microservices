@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: history-service
+  datasource:
+    url: jdbc:postgresql://host.docker.internal:5432/postgres?currentSchema=history
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+  data:
+    rest:
+      base-path: api/v1/data-rest

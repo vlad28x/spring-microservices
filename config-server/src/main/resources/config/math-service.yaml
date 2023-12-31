@@ -1,0 +1,4 @@
+server:
+  port: 8080
+question:
+  maxNumber: 1_000_000 # exclusive
