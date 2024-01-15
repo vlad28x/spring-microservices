@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate
 class WebConfig {
 
     @Bean
-    @LoadBalanced
+//    @LoadBalanced
     fun restTemplate() = RestTemplate()
 
 }

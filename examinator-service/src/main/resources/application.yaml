@@ -1,14 +1,27 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: examinator-service
   cloud:
     config:
       discovery:
-        enabled: true
+        enabled: false
         service-id: config-server
-  config:
-    import: 'optional:configserver:'
+      enabled: false
+
+management:
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  show-actuator: true
+
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://eureka-server:8761/eureka
+    enabled: false
+
+services:
+  exams: math, history

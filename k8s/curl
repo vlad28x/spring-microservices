@@ -1,0 +1,3 @@
+curl -X 'GET' \
+  'http://math-service/api/v1/questions?count=1' \
+  -H 'accept: */*'

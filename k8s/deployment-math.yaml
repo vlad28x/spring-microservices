@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: math-deployment
+  labels:
+    app: math
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: math
+  template:
+    metadata:
+      labels:
+        app: math
+    spec:
+      containers:
+        - name: math-container
+          image: math:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080

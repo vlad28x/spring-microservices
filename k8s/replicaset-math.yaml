@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: math-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: math
+  template:
+    metadata:
+      labels:
+        app: math
+    spec:
+      containers:
+      - name: math-container
+        image: math
+        imagePullPolicy: Never
+        ports:
+          - containerPort: 8080

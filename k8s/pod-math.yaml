@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: math-pod
+  labels:
+    app: math
+spec:
+  containers:
+    - name: math-container
+      image: math
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 8080

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exam-deployment
+  labels:
+    app: exam
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: exam
+  template:
+    metadata:
+      labels:
+        app: exam
+    spec:
+      containers:
+        - name: exam-container
+          image: exam:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8081
+          env:
+            - name: SERVER_SERVLET_CONTEXT_PATH
+              value: /exam-api
